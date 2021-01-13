@@ -9,6 +9,23 @@ import "./App.css";
 
 class App extends Component {
   state = {
+    looloosThings: [
+      {
+        name: 'volleyball',
+        image: 'https://imgur.com/ZrbHQNJ',
+        attributes: ['sand', 'balls', 'jumping']
+      },
+      {
+        name: 'keto',
+        image: 'https://imgur.com/pdJmmE5',
+        attributes: ['fasting', 'water', 'energy']
+      },
+      {
+        name: 'airplanes',
+        image: 'https://imgur.com/7mphFGI',
+        attributes: ['Bernoulis Principle', 'wings', 'fuselage']
+      }
+    ]
     user: authService.getUser(),
       AnnasThings: [
         { 
@@ -32,6 +49,23 @@ class App extends Component {
           attributes: ["why do i even wake up", "never enough"] 
         }
       ],
+    maliqsThings: [
+      {
+        name: 'banana',
+        image: 'https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        attributes: ['potassium-rich', 'yellow when good', 'not a taco', 'ring ring ring ring ring ring ring']
+      },
+      {
+        name: 'turkey',
+        image: 'https://images.unsplash.com/photo-1560011961-4ab41261de01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+        attributes: ['such gobbles', 'good when stuffed', 'not a taco', 'why gravy exists']
+      },
+      {
+        name: 'taco',
+        image: 'https://images.unsplash.com/photo-1545093149-618ce3bcf49d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80',
+        attributes: ['yummy in my tummy', 'salsas may vary', 'definitely a taco', 'very edible']
+      },
+    ],
   };
 
   handleLogout = () => {
@@ -48,7 +82,7 @@ class App extends Component {
     const { user } = this.state
     return (
       <>
-        <NavBar user={this.state.user} handleLogout={this.handleLogout}/>
+        <NavBar user={this.state.user} handleLogout={this.handleLogout} />
         <Route
           exact
           path="/"
