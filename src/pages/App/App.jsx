@@ -9,6 +9,23 @@ import "./App.css";
 
 class App extends Component {
   state = {
+    looloosThings: [
+      {
+        name: 'volleyball',
+        image: 'https://imgur.com/ZrbHQNJ',
+        attributes: ['sand', 'balls', 'jumping']
+      },
+      {
+        name: 'keto',
+        image: 'https://imgur.com/pdJmmE5',
+        attributes: ['fasting', 'water', 'energy']
+      },
+      {
+        name: 'airplanes',
+        image: 'https://imgur.com/7mphFGI',
+        attributes: ['Bernoulis Principle', 'wings', 'fuselage']
+      }
+    ]
     user: authService.getUser(),
   };
 
